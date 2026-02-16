@@ -3,10 +3,10 @@ using UnityEngine;
 public class CustomerTimer : MonoBehaviour
 {
 
-    public float CurrentTime;
+    public float CurrentTime; // do not change!!!
     public bool TimerActive;
     private CustomerData _customerData;
-    private float _customerTime;
+    public float _customerTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -5,24 +5,20 @@ public class CustomerData : MonoBehaviour
     public CustomerTypeEnum CustomerType;
     public float CustomerTime;
     public float MiniumTip;
-    public float MaxiumTip;
+    public float MaximumTip;
     private CustomerTimer _customerTimer;
-    public float CustomerTip;
+    public float TotalTip;
 
 
-    public void CalculateTip()
+    /*private void Start()
     {
-        CustomerTip = Random.Range(MiniumTip, MaxiumTip);
-    }
-
-    private void Start()
-    {
-        //_customerTimer = GetComponent<CustomerTimer>();
+        CalculateTip();
+        _customerTimer = GetComponent<CustomerTimer>();
     }
 
     private void Update()
     {
 
-    }
+    }*/
 
 }

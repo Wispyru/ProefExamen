@@ -356,6 +356,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6560543408522634378, guid: 389767586113cc247a96e7848350aff7, type: 3}
+      propertyPath: MaxiumTip
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560543408522634378, guid: 389767586113cc247a96e7848350aff7, type: 3}
+      propertyPath: MiniumTip
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560543408522634378, guid: 389767586113cc247a96e7848350aff7, type: 3}
+      propertyPath: CustomerTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6572501725862517947, guid: 389767586113cc247a96e7848350aff7, type: 3}
       propertyPath: m_Name
       value: TempCustomer
@@ -363,8 +375,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6572501725862517947, guid: 389767586113cc247a96e7848350aff7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1993257543}
   m_SourcePrefab: {fileID: 100100000, guid: 389767586113cc247a96e7848350aff7, type: 3}
+--- !u!1 &1993257537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6572501725862517947, guid: 389767586113cc247a96e7848350aff7, type: 3}
+  m_PrefabInstance: {fileID: 1953275882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1993257543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993257537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8ef97275ecbdc4eb05bc8e2ad56ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerTimer
+  CurrentTime: 2
+  TimerActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
