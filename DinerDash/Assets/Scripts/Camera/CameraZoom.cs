@@ -18,10 +18,16 @@ public class CameraZoom : MonoBehaviour
 
     private void Update()
     {
+        CameraZoomBounds();
+    }
+
+    private void CameraZoomBounds()
+    {
         if (Input.GetAxis("Mouse ScrollWheel") > 0 && _zoomBounds >= -4)
         {
             ZoomIn();
         }
+
         if (Input.GetAxis("Mouse ScrollWheel") < 0 && _zoomBounds <= 4)
         {
             ZoomOut();
