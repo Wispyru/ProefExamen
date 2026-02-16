@@ -1,38 +1,46 @@
+using System;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem.iOS;
 
 public class CameraPan : MonoBehaviour
 {
-    [SerializeField] private Camera mainCam;
-    private Vector3 cursorOrigin;
-    public float GroundZ = 0;
+    private Camera _mainCam;
+    private Vector3 _cursorOrigin;
+    private float _groundZ = 0;
+
+    private void Start()
+    {
+        _mainCam = GetComponentInChildren<Camera>();
+    }
 
     private void Update()
     {
         CameraPanning();
     }
 
-    private void CameraPanning()
+    public void CameraPanning()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            cursorOrigin = getWorldPosition(GroundZ);
+            _cursorOrigin = getWorldPosition(_groundZ);
         }
-
         if (Input.GetMouseButton(0))
         {
-            Vector3 direction = cursorOrigin - getWorldPosition(GroundZ);
-            mainCam.transform.position += direction;
+            Vector3 _direction = _cursorOrigin - getWorldPosition(_groundZ);
+            Vector3 _camPos = _mainCam.transform.position;
+            _camPos += new Vector3(_direction.x, 0, 0);
+            _mainCam.transform.position = _camPos;
         }
     }
 
     private Vector3 getWorldPosition(float z)
     {
-        Ray mousePos = mainCam.ScreenPointToRay(Input.mousePosition);
-        Plane ground = new Plane(Vector3.forward, new Vector3(0, 0, z));
-        float distance;
-        ground.Raycast(mousePos, out distance);
-        return mousePos.GetPoint(distance);
+        Ray _mousePos = _mainCam.ScreenPointToRay(Input.mousePosition);
+        Plane _ground = new Plane(Vector3.forward, new Vector3(0, 0, z));
+        float _distance;
+        _ground.Raycast(_mousePos, out _distance);
+        return _mousePos.GetPoint(_distance);
     }
 }
