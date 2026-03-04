@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CustomerTimer : MonoBehaviour
@@ -6,13 +7,15 @@ public class CustomerTimer : MonoBehaviour
     public float CurrentTime; // do not change!!!
     public bool TimerActive;
     private CustomerData _customerData;
-    public float _customerTime;
+    public float CustomerTime;
+    private float _timerStartDelay = 2f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _customerData = GetComponent<CustomerData>();
-        _customerTime = _customerData.CustomerTime;
+        CustomerTime = _customerData.CustomerTime;
         ResetTimer();
     }
 
@@ -39,6 +42,7 @@ public class CustomerTimer : MonoBehaviour
         if (TimerActive) return;
         TimerActive = true;
 
+
     }
 
     /// <summary>
@@ -56,7 +60,15 @@ public class CustomerTimer : MonoBehaviour
     /// </summary>
     public void ResetTimer()
     {
-        CurrentTime = _customerTime;
+        CurrentTime = CustomerTime;
+    }
+
+
+    private IEnumerator TimerDelay()
+    {
+        yield return new WaitForSeconds(_timerStartDelay);
+        StartTimer();
+
     }
 
 
