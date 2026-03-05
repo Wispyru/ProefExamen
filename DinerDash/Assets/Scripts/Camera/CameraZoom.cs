@@ -6,7 +6,7 @@ public class CameraZoom : MonoBehaviour
 {
     
     private Camera _mainCam;
-    
+    private GameData _gameData;
     private int _zoomBounds = 0;
 
    
@@ -18,7 +18,7 @@ public class CameraZoom : MonoBehaviour
 
     private void Update()
     {
-        CameraZoomBounds();
+        if(GameData.CurrentGameState == GameState.IdleMode) CameraZoomBounds();
     }
 
     private void CameraZoomBounds()

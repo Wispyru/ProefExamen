@@ -3,18 +3,17 @@ using UnityEngine;
 
 public class CustomerGeneration : MonoBehaviour
 {
+    // serialized variables
     [SerializeField]
     private GameObject _customersToSpawn;
 
-
-
+    // private variables
     private Transform[] _customerSlot;
     private int _minCustomers = 0;
     private int _maxCustomers = 4;
 
+    // public variables
     public int SpawnedCustomerAmount;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,5 +36,4 @@ public class CustomerGeneration : MonoBehaviour
             Instantiate(_customersToSpawn, _customerSlot[i].position, _customerSlot[i].rotation, _customerSlot[i]);
         }
     }
-    
 }
