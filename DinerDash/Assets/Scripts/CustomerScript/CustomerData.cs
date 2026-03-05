@@ -1,33 +1,50 @@
 using UnityEngine;
 
+[System.Serializable]
+public class TipSettings
+{
+    public float MinimumTip;
+    public float MaximumTip;
+}
+
 public class CustomerData : MonoBehaviour
 {
     public CustomerTypeEnum CustomerType;
 
-
-    //Group Variables
+    // Group Variables
     public int CustomerAmount;
 
-    //tip variables
-    public static float MiniumTip = 1f;
-    public static float MaximumTip = 10f;
-    public static float TotalTip;
+    [Header("Tip Settings")]
+    [SerializeField] private TipSettings _tipSettings;
 
-    //timer variables
+    public float TotalTip { get; private set; }
+
+    // Timer variables
     public float CustomerTime;
 
-    //private variables
-    private CustomerTimer _customerTimer;
-
-    /*private void Start()
+    /// <summary>
+    /// Sets the calculated tip for this specific customer
+    /// </summary>
+    public void SetTip(float amount)
     {
-        CalculateTip();
-        _customerTimer = GetComponent<CustomerTimer>();
+        TotalTip = amount;
     }
 
-    private void Update()
+    /// <summary>
+    /// Returns the tip multiplier based on customer type
+    /// </summary>
+    public float GetTipMultiplier()
     {
+        switch (CustomerType)
+        {
+            case CustomerTypeEnum.impatient:
+                return 1.3f;
 
-    }*/
+            case CustomerTypeEnum.reservation:
+                return 1.5f; // template, adjust later
 
+            default:
+                return 1f;
+        }
+    }
 }

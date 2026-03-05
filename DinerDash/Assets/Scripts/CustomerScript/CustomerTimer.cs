@@ -3,73 +3,94 @@ using UnityEngine;
 
 public class CustomerTimer : MonoBehaviour
 {
-
     public float CurrentTime; // do not change!!!
     public bool TimerActive;
+
     private CustomerData _customerData;
+    private PlayerGradingSystem _playerGradingSystem;
+
     public float CustomerTime;
+
     private float _timerStartDelay = 2f;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         _customerData = GetComponent<CustomerData>();
+        _playerGradingSystem = GetComponent<PlayerGradingSystem>();
+
         CustomerTime = _customerData.CustomerTime;
+
         ResetTimer();
+        StartCoroutine(TimerDelay());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
-    }
-
-    private void timerFunctionality()
-    {
-        if (TimerActive && CurrentTime > 0)
+        if (TimerActive)
         {
-            CurrentTime -= Time.deltaTime;
+            TimerFunctionality();
         }
-
     }
 
     /// <summary>
-    /// Start the PlayerTimer
+    /// Handles timer countdown logic
+    /// </summary>
+    private void TimerFunctionality()
+    {
+        if (CurrentTime <= 0)
+        {
+            CurrentTime = 0;
+            StopTimer();
+            Debug.Log("Timer reached zero.");
+            return;
+        }
+
+        CurrentTime -= Time.deltaTime;
+
+        // Round to 2 decimals for clean display
+        CurrentTime = Mathf.Round(CurrentTime * 100f) / 100f;
+    }
+
+    /// <summary>
+    /// Stops the timer and calculates tip
+    /// </summary>
+    public void StopTimer()
+    {
+        if (!TimerActive) return;
+
+        TimerActive = false;
+
+        Debug.Log("Timer stopped at: " + CurrentTime);
+
+        _playerGradingSystem.CalculateTip(CurrentTime);
+    }
+
+    /// <summary>
+    /// Starts the timer without resetting time
     /// </summary>
     public void StartTimer()
     {
         if (TimerActive) return;
+
         TimerActive = true;
 
-
+        Debug.Log("Timer resumed at: " + CurrentTime);
     }
 
     /// <summary>
-    /// Stops the player timer
-    /// </summary>
-    public void StopTimer()
-    {
-        // If timeractive is already false, do nothing. if it isn't false, make it false.
-        if (!TimerActive) return;
-        TimerActive = false;
-    }
-
-    /// <summary>
-    /// Resets the player timer
+    /// Resets timer back to starting value
     /// </summary>
     public void ResetTimer()
     {
         CurrentTime = CustomerTime;
-    }
+        CurrentTime = Mathf.Round(CurrentTime * 100f) / 100f;
 
+        Debug.Log("Timer reset to: " + CurrentTime);
+    }
 
     private IEnumerator TimerDelay()
     {
         yield return new WaitForSeconds(_timerStartDelay);
         StartTimer();
-
     }
-
-
 }
