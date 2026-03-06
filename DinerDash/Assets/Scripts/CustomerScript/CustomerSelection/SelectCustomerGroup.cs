@@ -17,7 +17,7 @@ public class SelectCustomerGroup : MonoBehaviour
 
     private void Update()
     {
-        if (Game == null) return;
+        if (Game == null || Group == null) return;
         Game.CustomerGroup = Group;
     }
 
