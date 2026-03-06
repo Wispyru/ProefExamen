@@ -8,16 +8,18 @@ public class BoundsChecker : MonoBehaviour
 
     private void Start()
     {
-        _customerGroup = GetComponent<SelectCustomerGroup>().Group;
+        
     }
 
     private void Update()
     {
+        if (_customerGroup == null) return;
         RaycastBoundsCheck();
     }
 
     private void RaycastBoundsCheck()
     {
-       if (Physics.CheckSphere(_customerGroup.transform.position, _sphereRadius, 3)) return;
+        _customerGroup = GetComponent<SelectCustomerGroup>().Group;
+        if (Physics.CheckSphere(_customerGroup.transform.position, _sphereRadius, 3)) return;
     }
 }
