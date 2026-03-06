@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AssignToTable : MonoBehaviour
 {
-    private TableData _tableState;
+    private TableData _tableData;
     private string _tagToCompare = "CustomerGroup";
 
     private void OnTriggerEnter(Collider other)
@@ -12,9 +12,9 @@ public class AssignToTable : MonoBehaviour
 
     private void CheckIfAvailable()
     {
-        _tableState = GetComponent<TableData>();
+        _tableData = GetComponent<TableData>();
 
-        if (_tableState.TableState != TableStateEnum.available) return;
+        if (_tableData.TableState != TableStateEnum.available) return;
 
         Debug.Log("This table is available!");
     }
