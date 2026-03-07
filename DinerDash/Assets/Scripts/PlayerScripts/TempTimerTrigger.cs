@@ -11,8 +11,6 @@ public class TempTimerTrigger : MonoBehaviour
 
         if (customerTimer == null) return;
 
-        Debug.Log("Customer entered trigger zone.");
-
         customerTimer.StopTimer();
     }
 }

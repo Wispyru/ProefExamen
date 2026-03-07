@@ -28,8 +28,6 @@ public class PlayerGradingSystem : MonoBehaviour
     /// </summary>
     public void CalculateTip(float remainingTime)
     {
-        Debug.Log("Calculating tip. Remaining time: " + remainingTime);
-
         for (int i = 0; i < _tipTiers.Length; i++)
         {
             if (remainingTime >= _tipTiers[i].MinimumTime)
@@ -45,8 +43,6 @@ public class PlayerGradingSystem : MonoBehaviour
         _calculatedTip = Mathf.Round(_calculatedTip * 100f) / 100f;
 
         _customerData.SetTip(_calculatedTip);
-
-        Debug.Log("Final tip after multiplier: $" + _calculatedTip);
     }
 
     /// <summary>
@@ -58,8 +54,6 @@ public class PlayerGradingSystem : MonoBehaviour
 
         GameData.Money += totalPayment;
         GameData.TipMoney += _customerData.TotalTip;
-
-        Debug.Log("Customer paid: $" + totalPayment);
     }
 }
 

@@ -5,12 +5,10 @@ public class CustomerTimer : MonoBehaviour
 {
     public float CurrentTime; // do not change!!!
     public bool TimerActive;
+    public float CustomerTime;
 
     private CustomerData _customerData;
     private PlayerGradingSystem _playerGradingSystem;
-
-    public float CustomerTime;
-
     private float _timerStartDelay = 2f;
 
     private void Start()
@@ -41,7 +39,6 @@ public class CustomerTimer : MonoBehaviour
         {
             CurrentTime = 0;
             StopTimer();
-            Debug.Log("Timer reached zero.");
             return;
         }
 
@@ -60,8 +57,6 @@ public class CustomerTimer : MonoBehaviour
 
         TimerActive = false;
 
-        Debug.Log("Timer stopped at: " + CurrentTime);
-
         _playerGradingSystem.CalculateTip(CurrentTime);
     }
 
@@ -73,8 +68,6 @@ public class CustomerTimer : MonoBehaviour
         if (TimerActive) return;
 
         TimerActive = true;
-
-        Debug.Log("Timer resumed at: " + CurrentTime);
     }
 
     /// <summary>
@@ -84,8 +77,6 @@ public class CustomerTimer : MonoBehaviour
     {
         CurrentTime = CustomerTime;
         CurrentTime = Mathf.Round(CurrentTime * 100f) / 100f;
-
-        Debug.Log("Timer reset to: " + CurrentTime);
     }
 
     private IEnumerator TimerDelay()
