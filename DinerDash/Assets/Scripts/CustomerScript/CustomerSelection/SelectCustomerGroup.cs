@@ -27,7 +27,6 @@ public class SelectCustomerGroup : MonoBehaviour
         _isAttached = true;
         Group = gameObject;
         //AttachCustomersToFinger(true);
-        _dragScript.GetMousePosition();
         GameData.CurrentGameState = GameState.AssignmentMode;
         Debug.Log(GameData.CurrentGameState);
     }

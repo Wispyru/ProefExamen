@@ -1,34 +1,39 @@
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem.Processors;
 using UnityEngine.UIElements;
 
 public class DragCustomers : MonoBehaviour
 {
-    private Camera _camera;
-    private SelectCustomerGroup _customerGroup;
-    private Vector2 _fingerPosition;
-    private Vector3 _position;
-    private float _distanceFromCamera = 12.5f;
+    private Vector3 screenPoint;
+    private Vector3 offset;
+    private float initialMouseY;
+    private float initialDepth;
 
+    
+    [SerializeField] private float depthSensitivity = 0.1f;
 
-    private void Start()
+    private void OnMouseDown()
     {
-        _customerGroup = GetComponent<SelectCustomerGroup>();
-        _camera = Camera.main;
+
+        screenPoint = Camera.main.WorldToScreenPoint(transform.position);
+        offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+
+        initialMouseY = Input.mousePosition.y;
+        initialDepth = screenPoint.z;
     }
 
-    public void GetMousePosition()
+    private void OnMouseDrag()
     {
 
-        _fingerPosition.x = Input.mousePosition.x;
-        _fingerPosition.y = Input.mousePosition.y;
+        float mouseDeltaY = Input.mousePosition.y - initialMouseY;
+        float newDepth = initialDepth + (mouseDeltaY * depthSensitivity);
 
 
-        _position = _camera.ScreenToWorldPoint(new Vector3(_fingerPosition.x, _fingerPosition.y, _distanceFromCamera));
-        MoveCustomerGroup(_position);
-    }
+        newDepth = Mathf.Max(0.1f, newDepth);
 
-    private void MoveCustomerGroup(Vector3 newPosition)
-    {
-        _customerGroup.Group.transform.position = newPosition;
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, newDepth);
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+        transform.position = curPosition;
     }
 }
