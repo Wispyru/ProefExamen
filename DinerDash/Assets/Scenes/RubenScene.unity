@@ -896,6 +896,8 @@ MonoBehaviour:
   - MinimumTime: 15
     TipAmount: 8
   - MinimumTime: 10
+    TipAmount: 6
+  - MinimumTime: 1
     TipAmount: 4
   - MinimumTime: 0
     TipAmount: 1
