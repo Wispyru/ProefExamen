@@ -9,6 +9,7 @@ public class SelectCustomerGroup : MonoBehaviour
     //private variables
     private bool _isAttached;
     private DragCustomers _dragScript;
+    private AssignToTable _tableAssignment;
 
     private void Start()
     {
@@ -29,6 +30,11 @@ public class SelectCustomerGroup : MonoBehaviour
         //AttachCustomersToFinger(true);
         GameData.CurrentGameState = GameState.AssignmentMode;
         Debug.Log(GameData.CurrentGameState);
+
+        if(_tableAssignment != null)
+        {
+            _tableAssignment.PlaceAtTable(Group);
+        }
     }
 
 
@@ -40,18 +46,27 @@ public class SelectCustomerGroup : MonoBehaviour
         GameData.CurrentGameState = GameState.IdleMode;
     }
 
-   /* private void AttachCustomersToFinger(bool _isFloating)
+    private void OnTriggerEnter(Collider other)
     {
-        if (_isAttached)
+        if (other.tag == "Table")
         {
-            //TODO: Deactivate Animation
+            _tableAssignment = other.gameObject.GetComponent<AssignToTable>();
         }
-        foreach(GameObject child in Group.GetComponentsInChildren<GameObject>())
-        {
-            Debug.Log("group is floating");
-            //TODO: Activate Animation
-        }
-    }*/
+       
+    }
+
+    /* private void AttachCustomersToFinger(bool _isFloating)
+     {
+         if (_isAttached)
+         {
+             //TODO: Deactivate Animation
+         }
+         foreach(GameObject child in Group.GetComponentsInChildren<GameObject>())
+         {
+             Debug.Log("group is floating");
+             //TODO: Activate Animation
+         }
+     }*/
 
 
 

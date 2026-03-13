@@ -83,7 +83,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466b5777d87cdbf4289eeeab92d096b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerGeneration
-  _customersToSpawn: {fileID: 6572501725862517947, guid: 389767586113cc247a96e7848350aff7, type: 3}
+  _customersToSpawn: {fileID: 0}
+  _customerList:
+  - {fileID: 5124046408670398822, guid: 94815974b714fcb40b0bf3ca4266d870, type: 3}
+  - {fileID: 8033145217851573487, guid: 7ff3f63e550804e449da802ccd07f855, type: 3}
+  - {fileID: 3795208202309239608, guid: 5c0ac2b9634344245aed16973eb96101, type: 3}
+  - {fileID: 5299579909618974704, guid: 195bc69b8beaf064dab55aed07928cd8, type: 3}
   SpawnedCustomerAmount: 0
 --- !u!114 &5948261979919059473
 MonoBehaviour:
@@ -97,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebbac11bfa1a174f8b1a7659d63a131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragCustomers
+  depthSensitivity: 0.1
 --- !u!114 &-7409297429547335937
 MonoBehaviour:
   m_ObjectHideFlags: 0
