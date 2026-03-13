@@ -18,10 +18,12 @@ public class SpawnCustomers : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawns customer group at the position of the game object
+    /// </summary>
     public void SpawnCustomerGroup()
     {
         Instantiate(_customerGroup, gameObject.transform.position, gameObject.transform.rotation);
-        
     }
 
 

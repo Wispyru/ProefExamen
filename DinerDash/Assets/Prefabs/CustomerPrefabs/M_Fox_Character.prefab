@@ -79,5 +79,115 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7647505581709664847}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4547201339656522652}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3232536389770781258}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8727555999964764289}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1175195660443227499}
   m_SourcePrefab: {fileID: 100100000, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+--- !u!1 &5124046408670398822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+  m_PrefabInstance: {fileID: 5466574857198597175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7647505581709664847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.96, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &4547201339656522652
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3232536389770781258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e4a1e1f97adc4aa6d73997372d187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  CustomerType: 0
+  CustomerAmount: 0
+  _tipSettings:
+    MinimumTip: 0
+    MaximumTip: 0
+  CustomerTime: 0
+--- !u!114 &-8727555999964764289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929d61cef2497d84ca601d5445e6cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsChecker
+  _rayDist: 0.6
+--- !u!114 &-1175195660443227499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4690c3a30e2e14c9efe25d212ba2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapToCollision
+  _useFrontBoundary: 1
+  _frontBoundaryZ: 5
+  _useRightBoundary: 1
+  _rightBoundaryX: -4

@@ -17,7 +17,7 @@ public class CameraPan : MonoBehaviour
 
     private void Update()
     {
-        CameraPanning();
+        if (GameData.CurrentGameState == GameState.IdleMode) CameraPanning();
     }
 
     public void CameraPanning()

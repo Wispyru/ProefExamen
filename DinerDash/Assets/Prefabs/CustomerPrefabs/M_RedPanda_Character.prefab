@@ -75,5 +75,90 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8512679726751772451}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4815103227477626282}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1087871912598281703}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7964103783267801315}
   m_SourcePrefab: {fileID: 100100000, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+--- !u!1 &5299579909618974704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 20da56c5e36512340bcfd80351cc94bf, type: 3}
+  m_PrefabInstance: {fileID: 4992954906402849441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8512679726751772451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299579909618974704}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.96, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4815103227477626282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299579909618974704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e4a1e1f97adc4aa6d73997372d187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  CustomerType: 0
+  CustomerAmount: 0
+  _tipSettings:
+    MinimumTip: 0
+    MaximumTip: 0
+  CustomerTime: 0
+--- !u!114 &-1087871912598281703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299579909618974704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929d61cef2497d84ca601d5445e6cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsChecker
+  _rayDist: 0.6
+--- !u!114 &-7964103783267801315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299579909618974704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4690c3a30e2e14c9efe25d212ba2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapToCollision
+  _useFrontBoundary: 1
+  _frontBoundaryZ: 5
+  _useRightBoundary: 1
+  _rightBoundaryX: -4
