@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1067504713594217140}
-  - component: {fileID: 6951575766055509810}
   - component: {fileID: 5310306690062772000}
   - component: {fileID: 5948261979919059473}
   - component: {fileID: -7409297429547335937}
@@ -72,18 +71,6 @@ Transform:
   - {fileID: 5495259608324145321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6951575766055509810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849497630253315810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929d61cef2497d84ca601d5445e6cd3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoundsChecker
 --- !u!114 &5310306690062772000
 MonoBehaviour:
   m_ObjectHideFlags: 0
