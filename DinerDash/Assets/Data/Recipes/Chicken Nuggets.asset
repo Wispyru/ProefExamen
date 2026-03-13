@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e87d42bca5f4f42892b741de68b0d7, type: 3}
+  m_Name: Chicken Nuggets
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeConfig
+  RecipeName: Chicken Nuggets
+  RecipeSprite: {fileID: 21300000, guid: eef7a3d983337db43959de267587e06a, type: 3}
+  Requirements:
+  - Type: 5
+    RequiredCount: 20
+  - Type: 0
+    RequiredCount: 10
