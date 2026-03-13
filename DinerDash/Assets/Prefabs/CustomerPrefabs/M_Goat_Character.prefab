@@ -79,6 +79,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1443f62357886e543b5f3454b2ac044d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 656953339669398142}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1443f62357886e543b5f3454b2ac044d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2526668934917376280}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1443f62357886e543b5f3454b2ac044d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6828250814536600364}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1443f62357886e543b5f3454b2ac044d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4955242973991307701}
   m_SourcePrefab: {fileID: 100100000, guid: 1443f62357886e543b5f3454b2ac044d, type: 3}
 --- !u!1 &8033145217851573487 stripped
 GameObject:
@@ -106,3 +115,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.96, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2526668934917376280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033145217851573487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e4a1e1f97adc4aa6d73997372d187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  CustomerType: 0
+  CustomerAmount: 0
+  _tipSettings:
+    MinimumTip: 0
+    MaximumTip: 0
+  CustomerTime: 0
+--- !u!114 &6828250814536600364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033145217851573487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929d61cef2497d84ca601d5445e6cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsChecker
+  _rayDist: 0.6
+--- !u!114 &-4955242973991307701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033145217851573487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4690c3a30e2e14c9efe25d212ba2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapToCollision
+  _useFrontBoundary: 1
+  _frontBoundaryZ: 5
+  _useRightBoundary: 1
+  _rightBoundaryX: -4

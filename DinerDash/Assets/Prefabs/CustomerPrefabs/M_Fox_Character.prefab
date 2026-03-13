@@ -86,6 +86,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4547201339656522652}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3232536389770781258}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8727555999964764289}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1175195660443227499}
   m_SourcePrefab: {fileID: 100100000, guid: e5c5fee84bb3ba0429c112cd12edddb8, type: 3}
 --- !u!1 &5124046408670398822 stripped
 GameObject:
@@ -135,3 +144,50 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3232536389770781258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e4a1e1f97adc4aa6d73997372d187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerData
+  CustomerType: 0
+  CustomerAmount: 0
+  _tipSettings:
+    MinimumTip: 0
+    MaximumTip: 0
+  CustomerTime: 0
+--- !u!114 &-8727555999964764289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929d61cef2497d84ca601d5445e6cd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoundsChecker
+  _rayDist: 0.6
+--- !u!114 &-1175195660443227499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5124046408670398822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4690c3a30e2e14c9efe25d212ba2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapToCollision
+  _useFrontBoundary: 1
+  _frontBoundaryZ: 5
+  _useRightBoundary: 1
+  _rightBoundaryX: -4

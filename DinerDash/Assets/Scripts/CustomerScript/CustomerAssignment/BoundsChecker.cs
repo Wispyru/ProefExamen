@@ -36,8 +36,8 @@ public class BoundsChecker : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Vector3 _endPosX = new Vector3(_customerGroup.transform.position.x + _rayDist,
-            _customerGroup.transform.position.y, _customerGroup.transform.position.z);
-        Vector3 _endPosZ = new Vector3(_customerGroup.transform.position.x, _customerGroup.transform.position.y,
+            _customerGroup.transform.position.y + 1, _customerGroup.transform.position.z);
+        Vector3 _endPosZ = new Vector3(_customerGroup.transform.position.x, _customerGroup.transform.position.y + 1,
             _customerGroup.transform.position.z - _rayDist);
         Gizmos.DrawLine(_customerGroup.transform.position, _endPosX);
         Gizmos.DrawLine(_customerGroup.transform.position, _endPosZ);
